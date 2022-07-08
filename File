@@ -1901,7 +1901,6 @@ end
                             BorderColor3 = Color3.fromRGB(0, 0, 0),
                             Position = UDim2.new(0.5, 0, 0.5, 0),
                             Size = UDim2.new(0, 215, 0, 20),
-                            AutoButtonColor = false,
                             Font = Enum.Font.Ubuntu,
                             Text = text,
                             TextColor3 = Color3.fromRGB(150, 150, 150),
