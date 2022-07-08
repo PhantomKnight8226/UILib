@@ -1893,18 +1893,16 @@ end
                             Position = UDim2.new(0, 0, 0, 0),
                             Size = UDim2.new(1, 0, 0, 30),
                         }, Container)
-
                         local TextLabelText = library:create("TextLabel", {
-                            Name = "TextLabel",
-                            AnchorPoint = Vector2.new(0.5, 0.5),
-                            BackgroundColor3 = Color3.fromRGB(25, 25, 25),
-                            BorderColor3 = Color3.fromRGB(0, 0, 0),
-                            Position = UDim2.new(0.5, 0, 0.5, 0),
-                            Size = UDim2.new(0, 215, 0, 20),
+                            Name = "TextLabelText",
+                            BackgroundTransparency = 1,
+                            Position = UDim2.new(0, 9, 0, 6),
+                            Size = UDim2.new(0, 200, 0, 9),
                             Font = Enum.Font.Ubuntu,
                             Text = text,
                             TextColor3 = Color3.fromRGB(150, 150, 150),
                             TextSize = 14,
+                            TextXAlignment = Enum.TextXAlignment.Left,
                         }, TextLabel)
                     elseif type == "Slider" then
                         Border.Size = Border.Size + UDim2.new(0, 0, 0, 35)
