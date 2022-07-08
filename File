@@ -1887,14 +1887,6 @@ end
                         element:set_value(value, true)
 		    elseif type == "TextLabel" then
 		    	Border.Size = Border.Size + UDim2.new(0, 0, 0, 30)
-
-                        local TextLabelFrame = library:create("Frame", {
-                            Name = "TextLabel",
-                            BackgroundTransparency = 1,
-                            Position = UDim2.new(0, 0, 0, 0),
-                            Size = UDim2.new(1, 0, 0, 30),
-                        }, Container)
-
                         local TextLabel = library:create("TextLabel", {
                             Name = "TextLabel",
                             AnchorPoint = Vector2.new(0.5, 0.5),
@@ -1906,7 +1898,7 @@ end
                             Text = text,
                             TextColor3 = Color3.fromRGB(150, 150, 150),
                             TextSize = 14,
-                        }, TextLabelFrame)
+                        }, Border)
                     elseif type == "Slider" then
                         Border.Size = Border.Size + UDim2.new(0, 0, 0, 35)
 
