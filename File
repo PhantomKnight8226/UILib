@@ -1882,6 +1882,7 @@ function library.new(library_title, cfg_location)
                             end
                             if TextBox.Text ~= value.Text then
                                 value.Text = TextBox.Text
+                                do_callback()
                             end
                         end)
                         uis.TextBoxFocused:connect(function()
