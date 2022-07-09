@@ -1880,6 +1880,9 @@ function library.new(library_title, cfg_location)
                             if string.len(TextBox.Text) > 15 then
                                 TextBox.Text = string.sub(TextBox.Text, 1, 15)
                             end
+                            if TextBox.Text ~= value.Text then
+                                value.Text = TextBox.Text
+                            end
                         end)
                         uis.TextBoxFocused:connect(function()
                             if uis:GetFocusedTextBox() == TextBox then
