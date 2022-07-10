@@ -1880,9 +1880,6 @@ function library.new(library_title, cfg_location)
                             if string.len(TextBox.Text) > 15 then
                                 TextBox.Text = string.sub(TextBox.Text, 1, 15)
                             end
-                            if TextBox.Text ~= value.Text then
-                                do_callback()
-                            end
                         end)
                         uis.TextBoxFocused:connect(function()
                             if uis:GetFocusedTextBox() == TextBox then
@@ -1897,6 +1894,7 @@ function library.new(library_title, cfg_location)
                                 {
                                     BorderColor3 = Color3.fromRGB(0, 0, 0)
                                 })
+                            do_callback()
                         end)
 
                         function element:set_value(new_value, cb)
