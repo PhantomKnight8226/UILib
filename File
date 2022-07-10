@@ -1890,12 +1890,12 @@ function library.new(library_title, cfg_location)
                             end
                         end)
                         uis.TextBoxFocusReleased:connect(function()
+                            value.Text = TextBox.Text
+                            do_callback()
                             library:tween(TextBox, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                                 {
                                     BorderColor3 = Color3.fromRGB(0, 0, 0)
                                 })
-                                value.Text = TextBox.Text
-                                do_callback()
                         end)
 
                         function element:set_value(new_value, cb)
