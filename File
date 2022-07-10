@@ -1881,7 +1881,6 @@ function library.new(library_title, cfg_location)
                                 TextBox.Text = string.sub(TextBox.Text, 1, 15)
                             end
                             if TextBox.Text ~= value.Text then
-                                value.Text = TextBox.Text
                                 do_callback()
                             end
                         end)
