@@ -1894,8 +1894,10 @@ function library.new(library_title, cfg_location)
                                 {
                                     BorderColor3 = Color3.fromRGB(0, 0, 0)
                                 })
-                            value.Text = TextBox.Text
-                            do_callback()
+                            if TextBox.Text ~= value.Text then
+                                value.Text = TextBox.Text
+                                do_callback()
+                            end
                         end)
 
                         function element:set_value(new_value, cb)
